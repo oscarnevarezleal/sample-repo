@@ -31,7 +31,17 @@ jobs:
           body: |
             Sentiment analysis: 
             - ${{ steps.sa.outputs.POS }}
+            - ${{ steps.sa.outputs.IS_50_POS }}
+            - ${{ steps.sa.outputs.IS_60_POS }}
+            - ${{ steps.sa.outputs.IS_70_POS }}
+            - ${{ steps.sa.outputs.IS_80_POS }}
+            - ${{ steps.sa.outputs.IS_90_POS }}
             - ${{ steps.sa.outputs.NEG }}
+            - ${{ steps.sa.outputs.IS_50_NEG }}
+            - ${{ steps.sa.outputs.IS_60_NEG }}
+            - ${{ steps.sa.outputs.IS_70_NEG }}
+            - ${{ steps.sa.outputs.IS_80_NEG }}
+            - ${{ steps.sa.outputs.IS_90_NEG }}
             - ${{ steps.sa.outputs.NEU }}
             - ${{ steps.sa.outputs.CMP }}
 
