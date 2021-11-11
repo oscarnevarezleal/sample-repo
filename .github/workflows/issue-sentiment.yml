@@ -20,10 +20,18 @@ jobs:
         with:
           content: I love apples and coding so much
 
-      - name: Add comment
+      - name: Add positive comment
+        if: ${{ steps.sa.outputs.POS > 0.6 }}
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
             This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
-            ${{ steps.sa.outputs.POS }}, ${{ steps.sa.outputs.NEG }}, ${{ steps.sa.outputs.NEU }}, ${{ steps.sa.outputs.CMP }}
+
+      - name: Add negative reaction
+        if: ${{ steps.sa.outputs.NEG > 0.6 }}
+        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            > "This Aggression Will Not Stand, Man."
