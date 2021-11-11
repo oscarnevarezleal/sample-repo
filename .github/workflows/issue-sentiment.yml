@@ -17,6 +17,8 @@ jobs:
       - name: Sentiment Analysis
         id: sa
         uses: oscarnevarezleal/issue-chill@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           owner: "oscarnevarezleal"
           repo: "sample-repo"
