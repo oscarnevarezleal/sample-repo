@@ -26,3 +26,4 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
+            ${{ steps.sa.outputs.POS }}, ${{ steps.sa.outputs.NEG }}, ${{ steps.sa.outputs.NEU }}, ${{ steps.sa.outputs.CMP }}
