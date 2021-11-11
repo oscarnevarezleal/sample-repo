@@ -24,8 +24,7 @@ jobs:
           repo: "sample-repo"
           issue: ${{ github.event.issue.number }}
 
-      - name: Add positive comment
-        if: ${{ steps.sa.outputs.POS > 0.6 }}
+      - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
           issue-number: ${{ github.event.issue.number }}
