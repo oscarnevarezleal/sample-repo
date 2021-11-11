@@ -18,7 +18,9 @@ jobs:
         id: sa
         uses: oscarnevarezleal/issue-chill@master
         with:
-          content: I love apples and coding so much
+          owner: "oscarnevarezleal"
+          repo: "sample-repo"
+          issue: ${{ github.event.issue.number }}
 
       - name: Add positive comment
         if: ${{ steps.sa.outputs.POS > 0.6 }}
