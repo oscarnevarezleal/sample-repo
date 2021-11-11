@@ -18,7 +18,7 @@ jobs:
         id: sa
         uses: oscarnevarezleal/issue-chill@master
         with:
-          body: I love apples and coding so much
+          content: I love apples and coding so much
 
       - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
