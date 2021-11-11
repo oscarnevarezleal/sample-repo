@@ -26,6 +26,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
+            > ${{ github.event.issue.number }}
             This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
 
       - name: Add negative reaction
@@ -34,4 +35,5 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
+            > ${{ github.event.issue.number }}
             > "This Aggression Will Not Stand, Man."
